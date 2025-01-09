@@ -8,7 +8,6 @@
   <style>
     #about{
     font-family: Arial, sans-serif;
-    
 }
 
 h1 {
@@ -33,29 +32,32 @@ details[open] summary {
 
   </style>
 </head>
-<body class="flex flex-col items-center justify-center h-screen bg-gray-800">
-  <div class="text-center">
-    <h1 class="text-4xl font-bold text-white mb-4" style="margin-bottom: 0;">Snake Game</h1>
-    <div id="about">
-        <h1>Product Description</h1>
+<body class="flex flex-col items-center justify-start h-screen bg-gray-800">
+  <header class="w-full text-center bg-gray-900 py-2 fixed top-0">
+    <h1 class="text-2xl font-bold text-white">Snake Game</h1>
+  </header>
+
+  <main class="flex flex-col items-center mt-16 w-full">
+    <div id="about" class="mt-4 text-center">
+        <h1 class="text-white">Product Description</h1>
         <details class="dropdown">
             <summary>Click here to see the description</summary>
             <p>this game is developed by Rio Kio...<span style="color: red;text-decoration: underline;">play it,enjoy it</span> </p>
         </details>
     </div>
-    <div class="mb-4">
+    <div class="mb-4 mt-4">
       <button id="startButton" class="px-4 py-2 bg-blue-500 text-white rounded">Start Game</button>
     </div>
     <p class="text-white mb-2">Score: <span id="scoreDisplay">0</span></p>
     <canvas id="gameCanvas" class="bg-gray-900" width="400" height="400"></canvas>
-    <div class="mt-4 grid grid-cols-3 gap-2 w-32 mx-auto">
-      <button id="upButton" class="px-4 py-2 bg-blue-500 text-white rounded">↑</button>
-      <button id="leftButton" class="px-4 py-2 bg-blue-500 text-white rounded">←</button>
-      <button id="rightButton" class="px-4 py-2 bg-blue-500 text-white rounded">→</button>
-      <button id="downButton" class="px-4 py-2 bg-blue-500 text-white rounded col-span-3">↓</button>
+    <div class="mt-4 grid grid-cols-3 gap-2 w-40 mx-auto">
+      <button id="leftButton" class="px-6 py-3 bg-blue-500 text-white rounded">←</button>
+      <button id="upButton" class="px-6 py-3 bg-blue-500 text-white rounded">↑</button>
+      <button id="rightButton" class="px-6 py-3 bg-blue-500 text-white rounded">→</button>
+      <button id="downButton" class="px-6 py-3 bg-blue-500 text-white rounded col-span-3">↓</button>
     </div>
     <p class="text-white mt-4">Use Arrow Keys or Touch Controls to Play</p>
-  </div>
+  </main>
 
   <script>
     const canvas = document.getElementById("gameCanvas");
@@ -211,3 +213,4 @@ details[open] summary {
   </script>
 </body>
 </html>
+
